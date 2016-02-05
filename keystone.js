@@ -41,7 +41,7 @@ keystone.import('models');
 // You may want to set it to something private and secure.
 
 if (!keystone.get('cookie secret')) {
-	keystone.set('cookie secret', '----change-me-to-something-secret----');
+	keystone.set('cookie secret', '6458dcc7b6e3af7c585a790376e638ba7cdec2070fdff149cc69d4254d82f478e97bb14315760fe31ea1bee8e993927286ca657ecfc67134924210eabb8f8849');
 }
 
 // Setup common locals for your templates. The following are required for the
