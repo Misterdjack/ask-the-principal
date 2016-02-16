@@ -79,7 +79,7 @@ $(function() {
 $(document).ready(function() {
     var owl = $("#review__carousel");
     owl.owlCarousel({
-     
+
         items:              2,
         itemsDesktop:       [1199,2],
         itemsDesktopSmall:  [991,2],
@@ -149,7 +149,7 @@ $(document).ready(function() {
         });
 
         this.destroy();
-        
+
     }, { offset: 'bottom-in-view' });
 });
 

@@ -55,12 +55,12 @@ html(lang="en")
 				.row.sidebar__form.form_alt
 					if user
 						if user.canAccessKeystone
-							a(href='/keystone').col-sm-12.btn.sidebar__btn Open Admin Panel
+							a(href='/keystone').col-xs-12.btn.sidebar__btn Open Admin Panel
 							br
 							br
-							a(href='/keystone/signout').col-sm-12.btn.sidebar__btn Sign Out
+							a(href='/keystone/signout').col-xs-12.btn.sidebar__btn Sign Out
 					else
-						a(href='/keystone/signin').col-sm-12.btn.sidebar__btn Sign In
+						a(href='/keystone/signin').col-xs-12.btn.sidebar__btn Sign In
 							//- Once KeystoneJS allows for custom login and admin ui use this login
 						//- .form-group
 						//- 	label.sr-only(for='login__username') Username
@@ -73,32 +73,31 @@ html(lang="en")
 					| Links
 				ul.sidebar__menu
 					li
-						a(href='http://thegreatacademy.org/') The Great Academy
+						a(href='http://thegreatacademy.org/' target='_blank') The Great Academy
 					li
-						a(href='index_app.html') App
+						a(href='https://www.khanacademy.org/' target='_blank') The Khan Academy
 					li
-						a(href='index_sign-up.html') Sign Up
+						a(href='http://www.aps.edu/' target='_blank') Albuquerque Public Schools
 				.sidebar__logo
 					| Ask the Principal
-		#header: .container
+		#header: .container-fluid
 			div(role="navigation")
-				.container-fluid
-					nav.navbar.navbar-default.navbar-fixed-top.js-navbar-top.js-toggleClass
-						.navbar-header
-							button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
-								span.sr-only Toggle navigation
-								span.icon-bar
-								span.icon-bar
-								span.icon-bar
-							a.navbar-brand(href='/') Ask the Principal
-						.collapse.navbar-collapse
-							ul.nav.navbar-nav.navbar-left
-								each link in navLinks
-									li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
-									li
-										a.js-toggle-sidebar(href='#')
-											span.oi.oi-menu.hidden-xs
-											span.visible-xs Login
+				nav.navbar.navbar-default.js-navbar-top.js-toggleClass
+					.navbar-header
+						button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+							span.sr-only Toggle navigation
+							span.icon-bar
+							span.icon-bar
+							span.icon-bar
+						a.navbar-brand(href='/') Ask the Principal
+					#navbar.collapse.navbar-collapse
+						ul.nav.navbar-nav.navbar-right
+							each link in navLinks
+								li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
+							li
+								a.js-toggle-sidebar(href='#')
+									span.oi.oi-menu.hidden-xs
+									span.visible-xs Login
 
 			//- BODY
 		#body: .wrapper
@@ -120,13 +119,13 @@ html(lang="en")
 			//
 				FOOTER
 				==============================
-		.container: #footer.wrapper
+		.container-fluid: #footer.wrapper
 			footer
 				.container
 					.row
 						.col-sm-6
-							a(href="https://github.com/Misterdjack") 
-								| © Misterdjack
+							a(href="http://thegreatacademy.org/") 
+								| © The Great Academy
 						.col-sm-6
 							.footer__social
 								a.footer-social__link.footer-social__link_twitter(href='#')
