@@ -80,55 +80,28 @@ html(lang="en")
 						a(href='index_sign-up.html') Sign Up
 				.sidebar__logo
 					| Ask the Principal
-		.wrapper
-			nav.navbar.navbar-default.navbar-fixed-top.js-navbar-top.js-toggleClass
-				.container
-					.navbar-header
-						button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
-							span.sr-only Toggle navigation
-							span.icon-bar
-							span.icon-bar
-							span.icon-bar
-						a.navbar-brand(href='#home') Ask the Principal
-					#navbar.collapse.navbar-collapse
-						ul.nav.navbar-nav.navbar-right
-							each link in navLinks
-								li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
-							li
-								a.js-toggle-sidebar(href='#')
-									span.oi.oi-menu.hidden-xs
-									span.visible-xs Login
-				// /.nav-collapse
-		//
-
-		//- Default HEADER and NAVBAR
-		//- #header: .container
-			//- Customise your site's navigation by changing the navLinks Array in ./routes/middleware.js
-			//- ... or completely change this header to suit your design.
-
-			//- div(role="navigation").navbar.navbar-default
-			//- 	.container-fluid
-			//- 		.navbar-header
-			//- 			button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
-			//- 				span.sr-only Toggle navigation
-			//- 				span.icon-bar
-			//- 				span.icon-bar
-			//- 				span.icon-bar
-			//- 			a.h2(href='/') ATP
-			//- 		.collapse.navbar-collapse
-			//- 			ul.nav.navbar-nav.navbar-left
-			//- 				each link in navLinks
-			//- 					li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
-			//- 			ul.nav.navbar-nav.navbar-right
-			//- 				if user
-			//- 					if user.canAccessKeystone
-			//- 						li: a(href='/keystone') Open Admin
-			//- 					li: a(href='/keystone/signout') Sign Out
-			//- 				else
-			//- 					li: a(href='/keystone/signin') Sign In
+		#header: .container
+			div(role="navigation")
+				.container-fluid
+					nav.navbar.navbar-default.navbar-fixed-top.js-navbar-top.js-toggleClass
+						.navbar-header
+							button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+								span.sr-only Toggle navigation
+								span.icon-bar
+								span.icon-bar
+								span.icon-bar
+							a.navbar-brand(href='/') Ask the Principal
+						.collapse.navbar-collapse
+							ul.nav.navbar-nav.navbar-left
+								each link in navLinks
+									li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
+									li
+										a.js-toggle-sidebar(href='#')
+											span.oi.oi-menu.hidden-xs
+											span.visible-xs Login
 
 			//- BODY
-		#body
+		#body: .wrapper
 
 			//- NOTE:
 			//- There is no .container wrapping class around body blocks to allow more flexibility in design.
@@ -147,6 +120,7 @@ html(lang="en")
 			//
 				FOOTER
 				==============================
+		.container: #footer.wrapper
 			footer
 				.container
 					.row
