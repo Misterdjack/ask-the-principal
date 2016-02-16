@@ -16,8 +16,8 @@ Enquiry.add({
 	email: { type: Types.Email, required: true },
 	phone: { type: String },
 	enquiryType: { type: Types.Select, options: [
-		{ value: 'message', label: "Feedback" },
 		{ value: 'question', label: "I've got a question for the Principal" },
+		{ value: 'message', label: "Feedback" },
 		{ value: 'other', label: "Other enquiries" }
 	] },
 	message: { type: Types.Markdown, required: true },
