@@ -48,24 +48,19 @@ html(lang="en")
 
 	//- HTML BODY
 	body(data-spy='scroll', data-target='.navbar', data-offset='71')
-			//- HEADER
-		#header: .container
-		//
-			//- SIDEBAR
-			==============================
 		.sidebar
 			.sidebar__wrapper
 				.sidebar__close.js-toggle-sidebar.visible-xs
 					span.oi.oi-x
-				.sidebar__form.form_alt
-					ul.nav.navbar-nav
-						if user
-							if user.canAccessKeystone
-								li: a(href='/keystone').btn.sidebar__btn Open Admin Panel
-								br
-								li: a(href='/keystone/signout').btn.sidebar__btn Sign Out
-						else
-							li: a(href='/keystone/signin').btn.sidebar__btn Sign In
+				.row.sidebar__form.form_alt
+					if user
+						if user.canAccessKeystone
+							a(href='/keystone').col-sm-12.btn.sidebar__btn Open Admin Panel
+							br
+							br
+							a(href='/keystone/signout').col-sm-12.btn.sidebar__btn Sign Out
+					else
+						a(href='/keystone/signin').col-sm-12.btn.sidebar__btn Sign In
 							//- Once KeystoneJS allows for custom login and admin ui use this login
 						//- .form-group
 						//- 	label.sr-only(for='login__username') Username
@@ -83,25 +78,9 @@ html(lang="en")
 						a(href='index_app.html') App
 					li
 						a(href='index_sign-up.html') Sign Up
-				//- h4.sidebar__heading
-				//- 	| Bonus pages
-				//- ul.sidebar__menu
-				//- 	li
-				//- 		a(href='sign-in.html') Sign In
-				//- 	li
-				//- 		a(href='sign-up.html') Sign Up
-				//- 	li
-				//- 		a(href='coming-soon.html') Coming Soon
 				.sidebar__logo
 					| Ask the Principal
-					
-			//
-				WRAPPER
-				==============================
-			.wrapper
-			//
-				NAVBAR
-				==============================
+		.wrapper
 			nav.navbar.navbar-default.navbar-fixed-top.js-navbar-top.js-toggleClass
 				.container
 					.navbar-header
@@ -119,34 +98,34 @@ html(lang="en")
 								a.js-toggle-sidebar(href='#')
 									span.oi.oi-menu.hidden-xs
 									span.visible-xs Login
-					// /.nav-collapse
-			//
+				// /.nav-collapse
+		//
 
-			//- Default HEADER and NAVBAR
-			//- #header: .container
-				//- Customise your site's navigation by changing the navLinks Array in ./routes/middleware.js
-				//- ... or completely change this header to suit your design.
+		//- Default HEADER and NAVBAR
+		//- #header: .container
+			//- Customise your site's navigation by changing the navLinks Array in ./routes/middleware.js
+			//- ... or completely change this header to suit your design.
 
-				//- div(role="navigation").navbar.navbar-default
-				//- 	.container-fluid
-				//- 		.navbar-header
-				//- 			button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
-				//- 				span.sr-only Toggle navigation
-				//- 				span.icon-bar
-				//- 				span.icon-bar
-				//- 				span.icon-bar
-				//- 			a.h2(href='/') ATP
-				//- 		.collapse.navbar-collapse
-				//- 			ul.nav.navbar-nav.navbar-left
-				//- 				each link in navLinks
-				//- 					li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
-				//- 			ul.nav.navbar-nav.navbar-right
-				//- 				if user
-				//- 					if user.canAccessKeystone
-				//- 						li: a(href='/keystone') Open Admin
-				//- 					li: a(href='/keystone/signout') Sign Out
-				//- 				else
-				//- 					li: a(href='/keystone/signin') Sign In
+			//- div(role="navigation").navbar.navbar-default
+			//- 	.container-fluid
+			//- 		.navbar-header
+			//- 			button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+			//- 				span.sr-only Toggle navigation
+			//- 				span.icon-bar
+			//- 				span.icon-bar
+			//- 				span.icon-bar
+			//- 			a.h2(href='/') ATP
+			//- 		.collapse.navbar-collapse
+			//- 			ul.nav.navbar-nav.navbar-left
+			//- 				each link in navLinks
+			//- 					li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
+			//- 			ul.nav.navbar-nav.navbar-right
+			//- 				if user
+			//- 					if user.canAccessKeystone
+			//- 						li: a(href='/keystone') Open Admin
+			//- 					li: a(href='/keystone/signout') Sign Out
+			//- 				else
+			//- 					li: a(href='/keystone/signin') Sign In
 
 			//- BODY
 		#body
