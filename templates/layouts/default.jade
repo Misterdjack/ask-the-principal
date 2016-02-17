@@ -82,21 +82,24 @@ html(lang="en")
 					| Ask the Principal
 		#header: .container-fluid
 			div(role="navigation")
-				nav.navbar.navbar-default.js-navbar-top.js-toggleClass
+				nav.navbar.navbar-default.js-navbar-top.js-toggleClass.navbar-fixed-top
 					.navbar-header
 						button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
 							span.sr-only Toggle navigation
 							span.icon-bar
 							span.icon-bar
 							span.icon-bar
-						a.navbar-brand(href='/') Ask the Principal
+						a(href='/').navbar-brand
+							span 							
+								img(src="/images/favicon-tga.ico", alt="The Great Academy").sidebar-toggle
+							| Ask the Principal
 					#navbar.collapse.navbar-collapse
 						ul.nav.navbar-nav.navbar-right
 							each link in navLinks
 								li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
 							li
 								a.js-toggle-sidebar(href='#')
-									span.oi.oi-menu.hidden-xs
+									span.oi.oi-menu.hidden-xs.sidebar-toggle
 									span.visible-xs Login
 
 			//- BODY
