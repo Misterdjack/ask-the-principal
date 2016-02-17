@@ -22,7 +22,7 @@ block content
 									.col-sm-4.col-md-4.gallery-image: img(src=gallery._.heroImage.limit(680,680)).img-rounded
 									.row
 										each image in gallery.images
-											a(href=image.limit(500,500), data-lightbox='portfolio').col-sm-8.col-md-8
+											.col-sm-8.col-md-8: a(href=image.limit(500,500), data-lightbox='portfolio')
 												img(src=image.limit(500,500)).img-responsive
 												.portfolio-item__mask
 													.portfolio-item-mask__content
