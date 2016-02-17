@@ -47,7 +47,7 @@ html(lang="en")
 		block head
 
 	//- HTML BODY
-	body(data-spy='scroll', data-target='.navbar', data-offset='71')
+	body
 		.sidebar
 			.sidebar__wrapper
 				.sidebar__close.js-toggle-sidebar.visible-xs
@@ -93,10 +93,14 @@ html(lang="en")
 							span 							
 								img(src="/images/favicon-tga.ico", alt="The Great Academy").sidebar-toggle
 							| Ask the Principal
-					#navbar.collapse.navbar-collapse
+					#navbar.collapse.navbar-collapse.navbar-default
 						ul.nav.navbar-nav.navbar-right
 							each link in navLinks
 								li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
+							li 
+								a(href='http://thegreatacademy.org/' target='_blank') The Great Academy
+							li 
+								a(href="#") Sponsorship Opporunity
 							li
 								a.js-toggle-sidebar(href='#')
 									span.oi.oi-menu.hidden-xs.sidebar-toggle
@@ -126,10 +130,12 @@ html(lang="en")
 			footer
 				.container
 					.row
-						.col-sm-6
+						.col-sm-4
 							a(href="http://thegreatacademy.org/") 
 								| © The Great Academy
-						.col-sm-6
+						.col-sm-4
+							img(src="../images/tga_logo_no_dots_footer.png", alt="The Great Academy Seal").center-block.img-responsive
+						.col-sm-4
 							.footer__social
 								a.footer-social__link.footer-social__link_twitter(href='#')
 									i.fa.fa-twitter
