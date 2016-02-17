@@ -1,13 +1,13 @@
 extends ../layouts/default
 
 block content
-	.container-fluid: .jumbotron
+	.container-fluid: .jumbotron.index-bg
 		.row
-			.col-md-6.text-center
-				img(src='/images/Jasper and Keisha.JPG' width='450px')
-			.col-md-6.text-center
+			.col-sm-6.text-center
+				img(src='/images/Jasper and Keisha.JPG').img-responsive
+			.col-sm-6.text-center
 				h1 Ask the Principal
-				a(href="/contact") What's on your mind? 
+				a(href="/contact").h3 What's on your mind? 
 				hr
 				if user && user.canAccessKeystone
 					p
