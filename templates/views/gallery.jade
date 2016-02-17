@@ -20,10 +20,10 @@ block content
 							.portfolio-item__img
 								if gallery.heroImage.exists
 									.col-sm-4.col-md-4.gallery-image: img(src=gallery._.heroImage.limit(680,680)).img-rounded
-									.col-sm-8.col-md-8: .row
+									.row: .col-sm-8.col-md-8
 										each image in gallery.images
-											a(href=image.limit(300,300), data-lightbox='portfolio')
-												img(src=image.limit(300,300)).img-responsive
+											a(href=image.limit(500,500), data-lightbox='portfolio')
+												img(src=image.limit(500,500)).img-responsive
 												.portfolio-item__mask
 													.portfolio-item-mask__content
 														.portfolio-item-mask__title
@@ -32,8 +32,8 @@ block content
 														//- 	| Pellentesque metus arcu, placerat nec porta in, ultricies id enim. Nullam sit amet viverra sapien, quis aliquet quam.
 								else
 									each image in gallery.images
-										a(href=image.limit(300,300), data-lightbox='portfolio')
-											img(src=image.limit(300,300)).img-responsive
+										a(href=image.limit(500,500), data-lightbox='portfolio')
+											img(src=image.limit(500,500)).img-responsive
 											.portfolio-item__mask
 												.portfolio-item-mask__content
 													.portfolio-item-mask__title
