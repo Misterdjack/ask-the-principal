@@ -5,40 +5,58 @@ block intro
 		h1 Gallery
 	
 block content
-	.container-fluid: #portfolio.section
+	.container
 		if galleries.length
 			each gallery in galleries
-				.container
-					.row
-						.col-xs-12
-							h4.heading= gallery.name
-								if gallery.publishedDate
-									.pull-right.text-muted= gallery._.publishedDate.format('Do MMM YYYY')
-				.portfolio__items
-					.portfolio__item
-						.portfolio-item__img
-							if gallery.heroImage.exists
-								.col-sm-4.col-md-4.gallery-image: img(src=gallery._.heroImage.limit(680,680)).img-rounded
-								.row
-									each image in gallery.images
-										.col-sm-8.col-md-8: a(href=image.limit(500,500), data-lightbox='portfolio')
-											img(src=image.limit(500,500)).img-responsive
-											.portfolio-item__mask
-												.portfolio-item-mask__content
-													.portfolio-item-mask__title
-														| Click to see larger image
-													//- .portfolio-item-mask__summary
-													//- 	| Pellentesque metus arcu, placerat nec porta in, ultricies id enim. Nullam sit amet viverra sapien, quis aliquet quam.
-							else
-								each image in gallery.images
-									a(href=image.limit(500,500), data-lightbox='portfolio')
-										img(src=image.limit(500,500)).img-responsive
-										.portfolio-item__mask
-											.portfolio-item-mask__content
-												.portfolio-item-mask__title
-													| Click to see larger image
-												//- .portfolio-item-mask__summary
-												//- 	| Pellentesque metus arcu, placerat nec porta in, ultricies id enim. Nullam sit amet viverra sapien, quis aliquet quam.
-					.clearfix
+				h2= gallery.name
+					if gallery.publishedDate
+						.pull-right.text-muted= gallery._.publishedDate.format('Do MMM YYYY')
+				
+				.row.gallery-images
+					if gallery.heroImage.exists
+						.col-sm-4.col-md-4.gallery-image: img(src=gallery._.heroImage.limit(680,680)).img-rounded
+						.col-sm-8.col-md-8: .row
+							each image in gallery.images
+								.col-xs-4.col-sm-4.col-md-3.gallery-image: img(src=image.limit(300,300)).img-rounded
+					else
+						each image in gallery.images
+							.col-xs-6.col-sm-4.col-md-3.gallery-image: img(src=image.limit(300,300)).img-rounded
 		else
 			h3.text-muted There are no image galleries yet.
+	//- .container-fluid: #portfolio.section
+	//- 	if galleries.length
+	//- 		each gallery in galleries
+	//- 			.container
+	//- 				.row
+	//- 					.col-xs-12
+	//- 						h4.heading= gallery.name
+	//- 							if gallery.publishedDate
+	//- 								.pull-right.text-muted= gallery._.publishedDate.format('Do MMM YYYY')
+	//- 			.portfolio__items
+	//- 				.portfolio__item
+	//- 					.portfolio-item__img
+	//- 						if gallery.heroImage.exists
+	//- 							.col-sm-4.col-md-4.gallery-image: img(src=gallery._.heroImage.limit(680,680)).img-rounded
+	//- 							.row
+	//- 								each image in gallery.images
+	//- 									.col-sm-8.col-md-8: a(href=image.limit(500,500), data-lightbox='portfolio')
+	//- 										img(src=image.limit(500,500)).img-responsive
+	//- 										.portfolio-item__mask
+	//- 											.portfolio-item-mask__content
+	//- 												.portfolio-item-mask__title
+	//- 													| Click to see larger image
+	//- 												//- .portfolio-item-mask__summary
+	//- 												//- 	| Pellentesque metus arcu, placerat nec porta in, ultricies id enim. Nullam sit amet viverra sapien, quis aliquet quam.
+	//- 						else
+	//- 							each image in gallery.images
+	//- 								a(href=image.limit(500,500), data-lightbox='portfolio')
+	//- 									img(src=image.limit(500,500)).img-responsive
+	//- 									.portfolio-item__mask
+	//- 										.portfolio-item-mask__content
+	//- 											.portfolio-item-mask__title
+	//- 												| Click to see larger image
+	//- 											//- .portfolio-item-mask__summary
+	//- 											//- 	| Pellentesque metus arcu, placerat nec porta in, ultricies id enim. Nullam sit amet viverra sapien, quis aliquet quam.
+	//- 				.clearfix
+	//- 	else
+	//- 		h3.text-muted There are no image galleries yet.
