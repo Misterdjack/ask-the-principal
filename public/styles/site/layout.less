@@ -189,6 +189,53 @@ body {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+// Hero
+// /**
+ // * Hero
+ // */
+/* General */
+.hero {
+  position: relative;
+  padding: 170px 0 100px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.hero::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: -webkit-linear-gradient(top, rgba(108, 91, 123, 0.8) 0%, rgba(53, 92, 125, 0.8) 100%);
+  background-image: -o-linear-gradient(top, rgba(108, 91, 123, 0.8) 0%, rgba(53, 92, 125, 0.8) 100%);
+  background-image: linear-gradient(to bottom, rgba(108, 91, 123, 0.8) 0%, rgba(53, 92, 125, 0.8) 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cc6c5b7b', endColorstr='#cc355c7d', GradientType=0);
+  content: "";
+}
+@media (min-width: 768px) {
+  .hero {
+    padding: 220px 0 150px;
+  }
+}
+.hero__heading {
+  margin-top: 0;
+  font-size: 40px;
+  color: white;
+}
+.hero__heading + .hero-heading__sub {
+  color: rgba(255, 255, 255, 0.9);
+	font-size: 20px;
+}
+.hero__btn.btn-link {
+  color: rgba(255, 255, 255, 0.9);
+}
+/* Hero :: Agency */
+.hero_agency {
+  background-image: url(../images/school-overview.jpg);
+  text-align: center;
+}
 
 // Footer
 #footer {
