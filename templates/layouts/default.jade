@@ -50,7 +50,7 @@ html(lang="en")
 	body
 		.sidebar
 			.sidebar__wrapper
-				.sidebar__close.js-toggle-sidebar.visible-xs
+				.sidebar__close.js-toggle-sidebar
 					span.oi.oi-x
 				.row.sidebar__form.form_alt
 					if user
@@ -100,11 +100,11 @@ html(lang="en")
 							li 
 								a(href='http://thegreatacademy.org/' target='_blank') The Great Academy
 							li 
-								a(href="#") Sponsorship Opporunity
+								a(href="http://thegreatacademy.org/teachers/family-resources-2/available-scholarships/" target="_blank") Scholarship Opporunity
 							li
 								a.js-toggle-sidebar(href='#')
-									span.oi.oi-menu.hidden-xs.sidebar-toggle
-									span.visible-xs Login
+									span.oi.oi-menu.visible-md.visible-lg.sidebar-toggle
+									span.visible-xs.visible-sm Login
 
 			//- BODY
 		#body: .wrapper
@@ -130,19 +130,18 @@ html(lang="en")
 			footer
 				.container
 					.row
-						.col-sm-4
-							a(href="http://thegreatacademy.org/") 
-								| © The Great Academy
-						.col-sm-4
-							img(src="../images/tga_logo_no_dots_footer.png", alt="The Great Academy Seal").center-block.img-responsive
-						.col-sm-4
+						.col-xs-12.col-sm-4.col-middle
+							| © The Great Academy
+						.col-xs-12.col-sm-4.col-middle
+							a(href="http://thegreatacademy.org/foundation/" target="_blank") 
+								img(src="../images/tga_logo_footer.png", alt="The Great Academy Seal").center-block.img-responsive
+						.col-xs-12.col-sm-4.col-middle
 							.footer__social
 								a.footer-social__link.footer-social__link_twitter(href='#')
 									i.fa.fa-twitter
 								a.footer-social__link.footer-social__link_facebook(href='#')
 									i.fa.fa-facebook
-								a.footer-social__link.footer-social__link_google-plus(href='#')
-									i.fa.fa-google-plus
+									
 			//- You don't _have_ to include a link saying your site is powered by KeystoneJS, but we appreciate it!
 			//- p Powered by <a href="http://keystonejs.com" target="_blank">KeystoneJS</a>.
 
