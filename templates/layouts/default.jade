@@ -73,7 +73,7 @@ html(lang="en")
 					| Links
 				ul.sidebar__menu
 					li
-						a(href='http://thegreatacademy.org/' target='_blank') The Great Academy
+						a(href='http://thegreatacademy.org/' target='_blank') The GREAT Academy
 					li
 						a(href='https://www.khanacademy.org/' target='_blank') The Khan Academy
 					li
@@ -97,10 +97,12 @@ html(lang="en")
 						ul.nav.navbar-nav.navbar-right
 							each link in navLinks
 								li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
+							li
+								a(href='http://thegreatacademy.org/foundation/' target='_blank') TGA Foundation
 							li 
 								a(href='http://player.listenlive.co/22401' target='_blank') The Great Academy
 							li 
-								a(href="http://thegreatacademy.org/teachers/family-resources-2/available-scholarships/" target="_blank") Scholarship Opporunity
+								a(href="http://thegreatacademy.org/teachers/family-resources-2/available-scholarships/" target="_blank") Sponsorship
 							li
 								a.js-toggle-sidebar(href='#')
 									span.oi.oi-menu.visible-md.visible-lg.sidebar-toggle
@@ -123,9 +125,8 @@ html(lang="en")
 			//- The content block should contain the body of your template's content
 			block content
 
-			//
-				FOOTER
-				==============================
+		//
+			FOOTER
 		.container-fluid: #footer.wrapper
 			footer
 				.container
@@ -136,10 +137,10 @@ html(lang="en")
 							a(href="http://thegreatacademy.org/foundation/" target="_blank") 
 								img(src="../images/tga_logo_footer.png", alt="The Great Academy Seal").center-block.img-responsive
 						.col-xs-12.col-sm-4.col-middle
-							.footer__social
-								a.footer-social__link.footer-social__link_twitter(href='#')
+							.footer__social Connect with us:  
+								a.footer-social__link.footer-social__link_twitter(href='https://twitter.com/TheGREATAcademy')
 									i.fa.fa-twitter
-								a.footer-social__link.footer-social__link_facebook(href='#')
+								a.footer-social__link.footer-social__link_facebook(href='https://www.facebook.com/thegreatacademy/')
 									i.fa.fa-facebook
 									
 			//- You don't _have_ to include a link saying your site is powered by KeystoneJS, but we appreciate it!

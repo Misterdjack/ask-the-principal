@@ -153,7 +153,10 @@ $(document).ready(function() {
     }, { offset: 'bottom-in-view' });
 });
 
-
+// Tooltip opt-in for Bootstrap
+$(document).ready(function() {
+  $('[data-toggle="tooltip"]').tooltip()
+});
 /**
  * Wow plugin bottom offset calculation
  */
