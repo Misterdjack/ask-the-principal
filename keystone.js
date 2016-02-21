@@ -11,24 +11,24 @@ var keystone = require('keystone');
 
 keystone.init({
 
-	'name': 'KeystoneJS',
-	'brand': 'KeystoneJS',
+	'name': 'Ask The Principal',
+	'brand': 'Ask The Principal',
 
 	'less': 'public',
-	
+
 	'static': 'public',
 	'favicon': 'public/favicon.ico',
 	'views': 'templates/views',
 	'view engine': 'jade',
-	
+
 	'emails': 'templates/emails',
-	
+
 	'auto update': true,
 	'session': true,
 	'session store': 'mongo',
 	'auth': true,
 	'user model': 'User'
-	
+
 });
 
 // Load your project's Models
@@ -63,14 +63,14 @@ keystone.set('routes', require('./routes'));
 // default email templates, you may remove them if you're using your own.
 
 // You should ensure you have the EMAIL_HOSTNAME environment variable set on
-// your production / staging servers, or images and links in your emails will 
+// your production / staging servers, or images and links in your emails will
 // default to http://localhost:3000.
 
 var email_hostname = process.env.EMAIL_HOSTNAME || 'localhost:3000';
 
 keystone.set('email locals', {
 	server: 'http://' + email_hostname,
-	logo_src: 'http://' + email_hostname + '/images/logo-email.gif',
+	logo_src: 'http://' + email_hostname + '/images/tga_logo_footer.png',
 	logo_width: 194,
 	logo_height: 76,
 	theme: {
