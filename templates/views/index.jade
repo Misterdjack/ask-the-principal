@@ -19,14 +19,15 @@ block content
 					//- a.hero__btn.btn.btn-lg.btn-primary.animated.fadeInUp.delay_2(href='#') Primary action
 					//- a.hero__btn.btn.btn-lg.btn-link.animated.fadeInUp.delay_2(href='#about') Find out more
 	.container-fluid: .jumbotron.index-bg
+		h1.hero__heading.animated.fadeInUp.delay_20.visible-xs.text-center Ask The Principal
 		.row
 			.row-same-height
 				.col-sm-6.col-lg-4
-					img(src='/images/Jasper and Keisha.JPG').center-block.col-sm-height.img-responsive
+					img(src='/images/Jasper and Keisha.JPG').center-block.img-responsive
 				.col-sm-6.col-lg-8.text-center
 					.col-middle.text-center
-						h1.heading.hero__heading.animated.fadeInUp.delay_20 Ask The Principal
-						p.heading__sub
+						h1.animated.fadeInUp.delay_20.hidden-xs Ask The Principal
+						p.heading__sub.animated.fadeInUp.delay_40
 							| Hosted by
 							br
 							strong Jasper & Keisha Mathews
@@ -34,7 +35,6 @@ block content
 							| 2nd + 4th Saturdays
 							br
 							| Noon - 1:00 pm on 770 KKOB AM				
-						br
 						hr
 						p.heading__sub.text-center
 							| Listen to our podcasts at:
@@ -43,21 +43,31 @@ block content
 									a(href="http://www.770kkob.com/podcasts/") 
 										img(src="/images/770kob.png", alt="770 KKOB-AM").img-responsive.btn-block
 						hr
-						p.heading__sub
-							.row
+						p.heading__sub.question-mark 
+							.row.hidden-sm
 								.col-xs-4.col-xs-offset-4
 									a(href="/contact")
-										img(src="/images/Question-mark-icon.png", alt='Question Mark', data-toggle='tooltip', data-placement='left', title='SUBMIT A QUESTION').img-responsive
-							br
-						hr
-			.row-same-height
-				br
-				br
-				.col-sm-12
-					if user && user.canAccessKeystone
-						p.text-center
-							a(href='/keystone/signin').btn.btn-default.btn-primary Open Admin Panel
-					else
-						p.text-center
-							a(href='/keystone/signin', style='margin-right: 10px').btn.btn-lg.btn-primary Sign in
-							|  to Admin Panel
+										img(src="/images/Question-mark-icon.png", alt='Question Mark', data-toggle='tooltip', data-placement='bottom', title='SUBMIT A QUESTION').img-responsive
+										br
+			.row.visible-sm
+				.col-xs-12
+					p.heading__sub.question-mark 
+						.row
+							.col-xs-2.col-xs-offset-5
+								a(href="/contact")
+									img(src="/images/Question-mark-icon.png", alt='Question Mark', data-toggle='tooltip', data-placement='bottom', title='SUBMIT A QUESTION').img-responsive
+									br				
+			.row
+			hr
+			.col-xs-6
+				if user && user.canAccessKeystone
+					p
+						a(href='/keystone/signin').btn.btn-default.btn-primary Open Admin Panel
+				else
+					p
+						a(href='/keystone/signin', style='margin-right: 10px').btn.btn-lg.btn-primary Sign in
+						span.hidden-xs to Admin Panel
+			.col-xs-6
+				.row
+					.col-xs-4.pull-right
+						img(src="/images/lego.png", alt='Lego Construction Man from Lego Movie', data-toggle='tooltip', data-placement='bottom', title='SITE UNDER CONSTRUCTION. Check back soon for new features!').lego
