@@ -1,23 +1,12 @@
 extends ../layouts/default
 
 block content
+	//- Top Header Section
 	.container-fluid
 		img(src="../images/tga_header_large.png", alt="The Great Academy").img-responsive.visible-sm.visible-xs
 		img(src='/images/stretch-bg.png').center-block.col-sm-height.img-responsive.visible-md.visible-lg
 
-		//- .container
-		//- 	.row
-		//- 		.col-xs-12
-		//- 			// Hero heading
-		//- 			h1.heading.hero__heading.animated.fadeInUp.delay_20 Ask The Principal - An open conversation on education
-		//- 			// Hero subheading
-		//- 			p.heading__sub.hero-heading__sub.animated.fadeInUp.delay_40
-		//- 				| Ask The Principal is a radio show dedicated to opening a dialogue on all aspects of modern education.  
-		//- 				br
-		//- 				|	We will discuss all the mercurial challenges of education, and the best tools to address them, including the Personalized and Blended Learning models.
-					// Hero buttons
-					//- a.hero__btn.btn.btn-lg.btn-primary.animated.fadeInUp.delay_2(href='#') Primary action
-					//- a.hero__btn.btn.btn-lg.btn-link.animated.fadeInUp.delay_2(href='#about') Find out more
+	//- Main Intro Section
 	.container-fluid: .jumbotron.index-bg
 		.row
 			.col-xs-12
@@ -58,8 +47,8 @@ block content
 							.col-xs-2.col-xs-offset-5
 								a(href="/contact")
 									img(src="/images/Question-mark-icon.png", alt='Question Mark', data-toggle='tooltip', data-placement='bottom', title='SUBMIT A QUESTION').img-responsive
-									br				
-			.row
+								br
+		.row
 			hr
 			.col-xs-6
 				if user && user.canAccessKeystone
@@ -73,3 +62,92 @@ block content
 				.row
 					.col-xs-4.pull-right
 						img(src="/images/lego.png", alt='Lego Construction Man from Lego Movie', data-toggle='tooltip', data-placement='top', title='SITE UNDER CONSTRUCTION. Check back soon for new features!').lego
+
+	//- Hero Divider Section 
+	.hero.hero_agency
+		.container-fluid
+			.row
+				.col-xs-12
+					// Hero heading
+					h1.heading.hero__heading.animated.fadeInUp.delay_20 Ask The Principal
+					br
+					// Hero subheading
+					p.heading__sub.hero-heading__sub.animated.fadeInUp.delay_40
+						| Ask The Principal is a radio show dedicated to opening a dialogue on all aspects of modern education.	
+						br
+						br
+						|	We will discuss all the mercurial challenges of education, and the best tools to address them, including the Personalized and Blended Learning models.
+
+	//- About Us Section
+	#team
+		.container-fluid
+			.row
+				.col-xs-12
+					h3.text-center Meet the team behind the talk
+					p.heading__sub
+						| Donec blandit ex vitae lectus malesuada ullamcorper. Praesent tempor pharetra leo, id mollis.
+						br
+						|	Aliquam at venenatis velit. Praesent tincidunt aliquet lectus, et auctor ex.
+			.row
+				.col-md-10.col-md-offset-1
+					.row
+						.col-xs-6.col-sm-4
+							.team__item
+								.team-item__img
+									img.img-responsive(src='img/team_1.jpg', alt='...')
+								.row
+									.col-md-6
+										.team-item__name Jasper Matthews M.Ed.
+										.team-item__position Host/Executive Producer
+									.col-md-6
+										.team-item__contact
+											a.team-item-contact__link(href='#')
+												i.fa.fa-twitter
+											a.team-item-contact__link.team-item-contact__link_facebook(href='#')
+												i.fa.fa-facebook
+											.clearfix
+						.col-xs-6.col-sm-4
+							.team__item
+								.team-item__img
+									img.img-responsive(src='img/team_2.jpg', alt='...')
+								.row
+									.col-md-6
+										.team-item__name Keisha Matthews M.Ed.
+										.team-item__position Host/Executive Producer
+									.col-md-6
+										.team-item__contact
+											a.team-item-contact__link(href='#')
+												i.fa.fa-twitter
+											a.team-item-contact__link.team-item-contact__link_facebook(href='#')
+												i.fa.fa-facebook
+											.clearfix
+						.col-xs-6.col-sm-4
+							.team__item
+								.team-item__img
+									img.img-responsive(src='img/team_3.jpg', alt='...')
+								.row
+									.col-md-6
+										.team-item__name Danielle Provo
+										.team-item__position Producer
+									.col-md-6
+										.team-item__contact
+											a.team-item-contact__link(href='#')
+												i.fa.fa-twitter
+											a.team-item-contact__link.team-item-contact__link_facebook(href='#')
+												i.fa.fa-facebook
+											.clearfix
+						.col-xs-6.col-sm-4.visible-xs
+							.team__item
+								.team-item__img
+									img.img-responsive(src='img/team_1.jpg', alt='...')
+								.row
+									.col-md-6
+										.team-item__name Denise Garcia
+										.team-item__position Producer
+									.col-md-6
+										.team-item__contact
+											a.team-item-contact__link(href='#')
+												i.fa.fa-twitter
+											a.team-item-contact__link.team-item-contact__link_facebook(href='#')
+												i.fa.fa-facebook
+											.clearfix

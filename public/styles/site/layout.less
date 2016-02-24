@@ -12,9 +12,14 @@ body {
 	width: 100%;
 }
 
-// Optional
+// Optional Bootstrap overrides
 .container-fluid {
+	margin: 0px;
 	padding: 0px;
+}
+
+.jumbotron {
+	margin-bottom: 0px;
 }
 //
 .index-bg {
@@ -227,49 +232,47 @@ body {
  // */
 /* General */
 .hero {
-
+  position: relative;
+  padding: 170px 0 100px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+	color: #fff;
 }
-// .hero {
-//   position: relative;
-//   padding: 170px 0 100px;
-//   background-position: center center;
-//   background-repeat: no-repeat;
-//   background-size: cover;
-// }
-// .hero::before {
-//   position: absolute;
-//   left: 0;
-//   top: 0;
-//   width: 100%;
-//   height: 100%;
-//   background-image: -webkit-linear-gradient(top, rgba(108, 91, 123, 0.8) 0%, rgba(53, 92, 125, 0.8) 100%);
-//   background-image: -o-linear-gradient(top, rgba(108, 91, 123, 0.8) 0%, rgba(53, 92, 125, 0.8) 100%);
-//   background-image: linear-gradient(to bottom, rgba(108, 91, 123, 0.8) 0%, rgba(53, 92, 125, 0.8) 100%);
-//   background-repeat: repeat-x;
-//   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cc6c5b7b', endColorstr='#cc355c7d', GradientType=0);
-//   content: "";
-// }
-// @media (min-width: 768px) {
-//   .hero {
-//     padding: 220px 0 150px;
-//   }
-// }
+.hero::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: -webkit-linear-gradient(top, rgba(199, 155, 153, 0.4) 0%, rgba(160, 0, 29, 0.7) 100%);
+  background-image: -o-linear-gradient(top, rgba(199, 155, 153, 0.4) 0%, rgba(160, 0, 29, 0.7) 100%);
+  background-image: linear-gradient(to bottom, rgba(199, 155, 153, 0.4) 0%, rgba(160, 0, 29, 0.7) 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cc6c5b7b', endColorstr='#cc355c7d', GradientType=0);
+  content: "";
+}
+@media (min-width: 768px) {
+  .hero {
+    padding: 220px 0 150px;
+  }
+}
 .hero__heading {
 	font-size: 55px;
 }
-// .hero__btn.btn-link {
-//   color: rgba(255, 255, 255, 0.9);
-// }
-// /* Hero :: Agency */
-// .hero_agency {
-//   // background-image: url(../images/tga_header_small.jpg);
-// 	background-repeat: no-repeat;
-// 	text-align: center;
-// }
-// .row.limit [class*="col-"]{
-//   max-height:300px;
-//   overflow:hidden;
-// }
+.hero__btn.btn-link {
+  color: rgba(255, 255, 255, 0.9);
+}
+/* Hero :: Agency */
+.hero_agency {
+  background-image: url(../images/school-small.jpg);
+	background-repeat: no-repeat;
+	text-align: center;
+}
+.row.limit [class*="col-"]{
+  max-height:300px;
+  overflow:hidden;
+}
 
 /**
  * Portfolio Section
@@ -403,6 +406,67 @@ body {
 }
 .lego{
 	height: 100px;
+}
+
+/**
+ * Team
+ */
+.team__item {
+  margin-bottom: 40px;
+}
+.team-item__img {
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.team-item__img > img {
+  border-radius: 3px;
+  -webkit-transition: -webkit-transform 0.7s;
+  -moz-transition: -moz-transform 0.7s;
+  -o-transition: -o-transform 0.7s;
+  transition: transform 0.7s;
+}
+@media (min-width: 768px) {
+  .team__item:hover .team-item__img > img {
+    -webkit-transform: rotate(-5deg) scale(1.1, 1.1);
+    -ms-transform: rotate(-5deg) scale(1.1, 1.1);
+    transform: rotate(-5deg) scale(1.1, 1.1);
+  }
+}
+.team-item-contact__link {
+  display: block;
+  float: left;
+  width: 50%;
+  margin-top: 4.6px;
+  margin-bottom: 4.6px;
+  border-radius: 3px 0 0 3px;
+  text-align: center;
+  line-height: 36.8px;
+  background-color: #eee;
+  color: #565656;
+  text-decoration: none;
+  -webkit-transition: all 0.15s;
+  -o-transition: all 0.15s;
+  transition: all 0.15s;
+}
+.team-item-contact__link:hover,
+.team-item-contact__link:focus {
+  background: #55acee;
+  color: white;
+}
+.team-item-contact__link_facebook {
+  border-left: 1px solid white;
+  border-radius: 0 3px 3px 0;
+}
+.team-item-contact__link_facebook:hover,
+.team-item-contact__link_facebook:focus {
+  background: #3b5998;
+}
+.team-item__name {
+  font-weight: 700;
+}
+.team-item__position {
+  margin-bottom: 10px;
+  color: #9a9a9a;
 }
 
 // Footer
