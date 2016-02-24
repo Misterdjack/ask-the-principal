@@ -1,6 +1,12 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 body {
 	background-image: url('../images/website-bg-white-small.png');
 	background-repeat: no-repeat;
+	margin-bottom: 220px;
 }
 
 #header {
@@ -11,6 +17,7 @@ body {
 #body {
 	width: 100%;
 }
+
 
 // Optional Bootstrap overrides
 .container-fluid {
@@ -471,6 +478,9 @@ body {
 
 // Footer
 #footer {
+	position: absolute;
+	height: 220px;
+	bottom: 0px;
 	margin-top: 30px;
 	border-top: 1px solid @gray-light;
 	padding-top: 30px;
@@ -509,9 +519,7 @@ footer a {
 .footer-social__link_facebook:hover {
   background-color: #3b5998;
 }
-.footer-social__link_google-plus:hover {
-  background-color: #dd4b39;
-}
+
 @media (min-width: 768px) {
   footer {
     text-align: left;
@@ -522,9 +530,10 @@ footer a {
   }
 }
 
-@media (max-width: @screen-xs-max) {
+@media (max-width: @screen-xs-min) {
 	#footer {
 		background-color: #fff;
+		height: 220px;
 	}
 
 	// .index-bg {
