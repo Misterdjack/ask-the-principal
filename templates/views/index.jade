@@ -3,99 +3,96 @@ extends ../layouts/default
 block content
 	//- Top Header Section
 	.container-fluid.margin-collapse
-		.wrapper
-			img(src="../images/tga_header_medium.png", alt="The Great Academy").img-responsive.visible-sm.visible-xs
-			img(src='/images/stretch-bg.png').center-block.col-sm-height.img-responsive.visible-md.visible-lg
+		img(src="../images/tga_header_medium.png", alt="The Great Academy").img-responsive.visible-sm.visible-xs
+		img(src='/images/stretch-bg.png').center-block.col-sm-height.img-responsive.visible-md.visible-lg
 
 	//- Main Intro Section
 	.container-fluid.margin-collapse 
-		.wrapper
-			.jumbotron.index-bg
-				.row
-					.col-xs-12
-						h1.hero__heading.animated.fadeInUp.delay_20.visible-xs.text-center Ask The Principal
-				.row
-					.row-same-height
-						.col-sm-6.col-lg-4
-							img(src='/images/Jasper and Keisha.JPG').center-block.img-responsive
-						.col-sm-6.col-lg-8.text-center
-							.col-middle.text-center
-								h1.animated.fadeInUp.delay_20.hidden-xs Ask The Principal
-								p.heading__sub.animated.fadeInUp.delay_40
-									| Hosted by
-									br
-									strong Jasper & Keisha Matthews
-									br
-									| 2nd & 4th Saturdays
-									br
-									| Noon - 1:00 pm on 770 KKOB AM				
-								hr
-								p.heading__sub.text-center
-									| Listen to our podcasts at:
-									.row
-										.col-sm-6.col-sm-offset-3
-											a(href="http://www.770kkob.com/podcasts/" target="_blank") 
-												img(src="/images/770kob.png", alt="770 KKOB-AM").img-responsive.btn-block
-								hr
-								p.heading__sub.question-mark 
-									.row.hidden-sm
-										.col-xs-4.col-xs-offset-4
-											a(href="/contact")
-												img(src="/images/Question-mark-icon.png", alt='Question Mark', data-toggle='tooltip', data-placement='bottom', title='SUBMIT A QUESTION').img-responsive
-												br
-					.row.visible-sm
-						.col-xs-12
-							p.heading__sub.question-mark 
+		.jumbotron.index-bg
+			.row
+				.col-xs-12
+					h1.hero__heading.animated.fadeInUp.delay_20.visible-xs.text-center Ask The Principal
+			.row
+				.row-same-height
+					.col-sm-6.col-lg-4
+						img(src='/images/Jasper and Keisha.JPG').center-block.img-responsive
+					.col-sm-6.col-lg-8.text-center
+						.col-middle.text-center
+							h1.animated.fadeInUp.delay_20.hidden-xs Ask The Principal
+							p.heading__sub.animated.fadeInUp.delay_40
+								| Hosted by
+								br
+								strong Jasper & Keisha Matthews
+								br
+								| 2nd & 4th Saturdays
+								br
+								| Noon - 1:00 pm on 770 KKOB AM				
+							hr
+							p.heading__sub.text-center
+								| Listen to our podcasts at:
 								.row
-									.col-xs-2.col-xs-offset-5
+									.col-sm-6.col-sm-offset-3
+										a(href="http://www.770kkob.com/podcasts/" target="_blank") 
+											img(src="/images/770kob.png", alt="770 KKOB-AM").img-responsive.btn-block
+							hr
+							p.heading__sub.question-mark 
+								.row.hidden-sm
+									.col-xs-4.col-xs-offset-4
 										a(href="/contact")
 											img(src="/images/Question-mark-icon.png", alt='Question Mark', data-toggle='tooltip', data-placement='bottom', title='SUBMIT A QUESTION').img-responsive
-										br
-				.row
-					hr
-					.col-xs-6
-						if user && user.canAccessKeystone
-							p
-								a(href='/keystone/signin').btn.btn-default.btn-primary Open Admin Panel
-						else
-							p
-								a(href='/keystone/signin', style='margin-right: 10px').btn.btn-lg.btn-primary Sign in
-								span.hidden-xs to Admin Panel
-					.col-xs-6
-						.row
-							.col-xs-4.pull-right
-								img(src="/images/lego.png", alt='Lego Construction Man from Lego Movie', data-toggle='tooltip', data-placement='top', title='SITE UNDER CONSTRUCTION. Check back soon for new features!').lego
+											br
+				.row.visible-sm
+					.col-xs-12
+						p.heading__sub.question-mark 
+							.row
+								.col-xs-2.col-xs-offset-5
+									a(href="/contact")
+										img(src="/images/Question-mark-icon.png", alt='Question Mark', data-toggle='tooltip', data-placement='bottom', title='SUBMIT A QUESTION').img-responsive
+									br
+			.row
+				hr
+				.col-xs-6
+					if user && user.canAccessKeystone
+						p
+							a(href='/keystone/signin').btn.btn-default.btn-primary Open Admin Panel
+					else
+						p
+							a(href='/keystone/signin', style='margin-right: 10px').btn.btn-lg.btn-primary Sign in
+							span.hidden-xs to Admin Panel
+				.col-xs-6
+					.row
+						.col-xs-4.pull-right
+							img(src="/images/lego.png", alt='Lego Construction Man from Lego Movie', data-toggle='tooltip', data-placement='top', title='SITE UNDER CONSTRUCTION. Check back soon for new features!').lego
 
 	//- Hero Divider Section 
 	.hero.hero_agency
 		.container-fluid
-			.wrapper
-				.row
-					.col-xs-10.col-xs-offset-1
-						// Hero heading
-						h1.heading.hero__heading.animated.fadeInUp.delay_20 Ask The Principal
+			.row
+				.col-xs-10.col-xs-offset-1
+					// Hero heading
+					h1.heading.hero__heading.animated.fadeInUp.delay_20 Ask The Principal
+					br
+					// Hero subheading
+					h4.heading__sub.hero-heading__sub.animated.fadeInUp.delay_40
+						| Ask The Principal is a radio show dedicated to discussing important topics in Education.
 						br
-						// Hero subheading
-						h4.heading__sub.hero-heading__sub.animated.fadeInUp.delay_40
-							| Ask The Principal is a radio show dedicated to discussing important topics in Education.
-							br
-							br
-							| Jasper and Keisha Matthews are the founders of The GREAT Academy charter school located in Albuquerque, New Mexico. The GREAT Academy is a FREE Public Charter School for grades 6 – 12. This school embraces a unique, one-of-a-kind, business-school model. The mission of the school is to ensure that students:
-							br
-							br
-							span(style='font-size: 2em') G
-							| ain 
-							span(style='font-size: 2em') R
-							| eal-world 
-							span(style='font-size: 2em') E
-							| xperience through 
-							span(style='font-size: 2em') A
-							| ctive 
-							span(style='font-size: 2em') T
-							| ransition
-							br
-							br
-							a(href="/images/ATP-sponsorship-packet.pdf" target='_blank').btn.btn-lg.btn-primary Become a sponsor
+						br
+						| Jasper and Keisha Matthews are the founders of The GREAT Academy charter school located in Albuquerque, New Mexico. The GREAT Academy is a FREE Public Charter School for grades 6 – 12. This school embraces a unique, one-of-a-kind, business-school model. The mission of the school is to ensure that students:
+						br
+						br
+						span(style='font-size: 2em') G
+						| ain 
+						span(style='font-size: 2em') R
+						| eal-world 
+						span(style='font-size: 2em') E
+						| xperience through 
+						span(style='font-size: 2em') A
+						| ctive 
+						span(style='font-size: 2em') T
+						| ransition
+						br
+						br
+						a(href="/images/ATP-sponsorship-packet.pdf" target='_blank').btn.btn-lg.btn-primary Become a sponsor
 	//- About Us Section
 	//- #team
 	//- 	.container-fluid
