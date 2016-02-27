@@ -45,17 +45,17 @@ Enquiry.schema.methods.sendNotificationEmail = function(callback) {
 
 		// Email sending is disabled by default now that mandrill doesn't offer
 		// a free account tier on heroku.
-		/*
+
 		new keystone.Email('enquiry-notification').send({
 			to: admins,
 			from: {
-				name: 'KeystoneJS',
-				email: 'contact@keystonejs.com'
+				name: 'Ask The Principal',
+				email: 'contact@ask-the-principal.com'
 			},
-			subject: 'New Enquiry for KeystoneJS',
+			subject: 'New Enquiry for Ask The Principal',
 			enquiry: enqiury
 		}, callback);
-		*/
+
 
 	});
 
