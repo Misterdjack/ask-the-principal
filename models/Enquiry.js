@@ -50,7 +50,7 @@ Enquiry.schema.methods.sendNotificationEmail = function(callback) {
 			to: admins,
 			from: {
 				name: 'Ask The Principal',
-				email: 'contact@ask-the-principal.com'
+				email: 'contact@asktheprincipal.com'
 			},
 			subject: 'New Enquiry for Ask The Principal',
 			enquiry: enqiury
