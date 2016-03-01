@@ -1,13 +1,3 @@
-/*------------------------------------------------------------------
-Project:        Landitt
-Author:         Yevgeny Simzikov
-URL:            http://simpleqode.com/
-                https://twitter.com/YevSim
-                https://www.facebook.com/simpleqode
-Version:        1.0.0
-Created:        27/05/2015
-Last change:    27/05/2015
--------------------------------------------------------------------*/
 
 /**
  * Navigation
@@ -167,3 +157,17 @@ $(".wow").each(function() {
 });
 
 new WOW().init();
+
+// E-mail submittal to Formspree
+$(document).ready(function() {
+
+  $( "#form" ).submit(function( event ) {
+    $.ajax({
+      url: "//formspree.io/darrenjack79@yahoo.com",
+      method: "POST",
+      data: $(this).serialize(),
+      dataType: 'json',
+    });
+  });
+
+});
