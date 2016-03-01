@@ -21,6 +21,8 @@ keystone.init({
 	'views': 'templates/views',
 	'view engine': 'jade',
 
+	'mandrill api key': 'QpQF858QdASI3S0Oz2zZUw',
+
 	'emails': 'templates/emails',
 
 	'auto update': true,
