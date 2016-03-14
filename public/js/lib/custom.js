@@ -62,91 +62,96 @@ $(function() {
 });
 
 
-/**
- * Own carousel :: Testimonials
- */
-
+// Bootstrap Custom JS
 $(document).ready(function() {
-    var owl = $("#review__carousel");
-    owl.owlCarousel({
 
-        items:              2,
-        itemsDesktop:       [1199,2],
-        itemsDesktopSmall:  [991,2],
-        itemsTablet:        [768,2],
-        itemsTabletSmall:   false,
-        itemsMobile:        [479,1],
-        navigation : true,
-        slideSpeed: 600,
-        pagination: false,
-        navigationText: ['<i class="oi oi-arrow-left"></i>','<i class="oi oi-arrow-right"></i>']
+  // Tooltip opt-in
+  $('[data-toggle="tooltip"]').tooltip()
 
-    });
+  // Carousel controls
+  $('.carousel-control.left').click(function() {
+    $('#myCarousel').carousel('prev');
+  });
+
+  $('.carousel-control.right').click(function() {
+    $('#myCarousel').carousel('next');
+  });
 });
 
+/**
+ * Own carousel :: Sponsors
+ */
 
+// $(document).ready(function() {
+//   var owl = $('.owl-carousel');
+//   owl.owlCarousel({
+//       items:4,
+//       loop:true,
+//       margin:5,
+//       responsiveBaseElement:".owl-wrapper",
+//       autoplay:true,
+//       autoplayTimeout:1000,
+//       autoplayHoverPause:true
+//   });
+// });
 /**
  * Doughnut charts :: Skills
  */
 
 /* Base donut styles */
 
-$.fn.peity.defaults.donut = {
-    delimiter: null,
-    fill: ["#F67280", "#eee"],
-    height: null,
-    innerRadius: 68,
-    radius: 70,
-    width: null
-};
+// $.fn.peity.defaults.donut = {
+//     delimiter: null,
+//     fill: ["#F67280", "#eee"],
+//     height: null,
+//     innerRadius: 68,
+//     radius: 70,
+//     width: null
+// };
 
 /* Animating donuts */
 
-$(document).ready(function() {
-    $(".js-skills__item_first").waypoint(function() {
+// $(document).ready(function() {
+//     $(".js-skills__item_first").waypoint(function() {
+//
+//         setTimeout(function () {
+//             $('.skills__item').css("visibility", "visible");
+//         }, 11);
+//
+//         $('.skills-item__donut').each(function () {
+//             var $this = $(this);
+//
+//             var updateChart = $this.peity('donut');
+//             var text = "";
+//             var i = 0;
+//             var str = $this.html();
+//             var arr = str.split("/");
+//             var value = arr[0];
+//             var maxValue = arr[1];
+//             var step = value/100;
+//
+//             function myLoop() {
+//                 setTimeout(function () {
+//
+//                     text = i + "/" + maxValue;
+//
+//                     updateChart.text(text)
+//                         .change()
+//
+//                     i = i + step;
+//
+//                     if (i <= value) myLoop();
+//
+//                 }, 10)
+//             }
+//             myLoop();
+//         });
+//
+//         this.destroy();
+//
+//     }, { offset: 'bottom-in-view' });
+// });
 
-        setTimeout(function () {
-            $('.skills__item').css("visibility", "visible");
-        }, 11);
-
-        $('.skills-item__donut').each(function () {
-            var $this = $(this);
-
-            var updateChart = $this.peity('donut');
-            var text = "";
-            var i = 0;
-            var str = $this.html();
-            var arr = str.split("/");
-            var value = arr[0];
-            var maxValue = arr[1];
-            var step = value/100;
-
-            function myLoop() {
-                setTimeout(function () {
-
-                    text = i + "/" + maxValue;
-
-                    updateChart.text(text)
-                        .change()
-
-                    i = i + step;
-
-                    if (i <= value) myLoop();
-
-                }, 10)
-            }
-            myLoop();
-        });
-
-        this.destroy();
-
-    }, { offset: 'bottom-in-view' });
-});
-
-// Tooltip opt-in for Bootstrap
-$(document).ready(function() {
-  $('[data-toggle="tooltip"]').tooltip()
-});
 /**
  * Wow plugin bottom offset calculation
  */

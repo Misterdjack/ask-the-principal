@@ -18,6 +18,19 @@ block content
 					.col-sm-6.col-lg-8.text-center
 						.col-middle.text-center
 							h1.animated.fadeInUp.delay_20.hidden-xs Ask The Principal
+							hr
+							//- .row
+							//- 	.owl-wrapper
+							//- 		.col-xs-8.btn-block
+							//- 			.owl-carousel
+							//- 				a(href="http://thegreatacademy.org/foundation/" target="_blank") 
+							//- 					img(src="../images/tga_logo_footer.png", alt="The Great Academy Seal")
+							//- 				a(href="http://thegreatacademy.org/foundation/" target="_blank") 
+							//- 					img(src="../images/tga_logo_footer.png", alt="The Great Academy Seal")
+							//- 				a(href="http://thegreatacademy.org/foundation/" target="_blank") 
+							//- 					img(src="../images/tga_logo_footer.png", alt="The Great Academy Seal").center-block.img-responsive
+							//- 				a(href="http://thegreatacademy.org/foundation/" target="_blank") 
+							//- 					img(src="../images/tga_logo_footer.png", alt="The Great Academy Seal")
 							p.heading__sub.animated.fadeInUp.delay_40
 								| Hosted by
 								br
@@ -35,34 +48,52 @@ block content
 											img(src="/images/770kob.png", alt="770 KKOB-AM").img-responsive.btn-block
 							hr
 							p.heading__sub.question-mark 
-								.row.hidden-sm
+								.row.visible-lg
 									.col-xs-4.col-xs-offset-4
 										a(href="/contact")
 											img(src="/images/Question-mark-icon.png", alt='Question Mark', data-toggle='tooltip', data-placement='bottom', title='SUBMIT A QUESTION').img-responsive
 											br
-				.row.visible-sm
-					.col-xs-12
-						p.heading__sub.question-mark 
-							.row
-								.col-xs-2.col-xs-offset-5
-									a(href="/contact")
-										img(src="/images/Question-mark-icon.png", alt='Question Mark', data-toggle='tooltip', data-placement='bottom', title='SUBMIT A QUESTION').img-responsive
-									br
-			.row
-				hr
-				.col-xs-6
-					if user && user.canAccessKeystone
-						p
-							a(href='/keystone/signin').btn.btn-default.btn-primary Open Admin Panel
-					else
-						p
-							a(href='/keystone/signin', style='margin-right: 10px').btn.btn-lg.btn-primary Sign in
-							span.hidden-xs to Admin Panel
-				.col-xs-6
-					.row
-						.col-xs-4.pull-right
-							img(src="/images/lego.png", alt='Lego Construction Man from Lego Movie', data-toggle='tooltip', data-placement='top', title='SITE UNDER CONSTRUCTION. Check back soon for new features!').lego
-
+			.row.hidden-lg
+				.col-xs-12
+					p.heading__sub.question-mark 
+						.row
+							.col-xs-4.col-sm-2.col-xs-offset-4.col-sm-offset-5
+								a(href="/contact")
+									img(src="/images/Question-mark-icon.png", alt='Question Mark', data-toggle='tooltip', data-placement='bottom', title='SUBMIT A QUESTION').img-responsive
+								br
+	.container
+		.row
+			.col-xs-12
+				#myCarousel.carousel.slide(data-ride='carousel')
+					//- Title
+					h3.heading__sub.animated.fadeInUp.delay_40
+						strong Sponsored by
+					// Indicators
+					//- ol.carousel-indicators
+					//- 	li.active(data-target='#myCarousel', data-slide-to='0')
+					//- 	li(data-target='#myCarousel', data-slide-to='1')
+					//- 	li(data-target='#myCarousel', data-slide-to='2')
+					// Wrapper for slides
+					.carousel-inner(role='listbox')
+						.item.active
+							img(src="/images/tga_logo_footer.png", alt="The Great Academy Seal")
+							h3.text-center
+								| The Great Academy Foundation
+						.item
+							img(src="/images/770-kkob-noborder-sm.png", alt="770 KKOB-AM")
+							h3.text-center
+								| 770 KKOB-AM Radio New Mexico
+						.item
+							img(src="/images/logo-placeholder.png", alt="Your Company Here")
+							h3.text-center
+								| Your Business or Organization Here
+					// Controls
+					a.left.carousel-control(href='#myCarousel', role='button', data-slide='prev')
+						span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
+						span.sr-only Previous
+					a.right.carousel-control(href='#myCarousel', role='button', data-slide='next')
+						span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
+						span.sr-only Next
 	//- Hero Divider Section 
 	.hero.hero_agency
 		.container
@@ -163,3 +194,18 @@ block content
 	//- 										a.team-item-contact__link.team-item-contact__link_facebook(href='#')
 	//- 											i.fa.fa-facebook
 	//- 										.clearfix
+	.container
+		.row.padding
+			//- Login and under Construction section
+			.col-xs-6
+				if user && user.canAccessKeystone
+					p
+						a(href='/keystone/signin').btn.btn-default.btn-primary Open Admin Panel
+				else
+					p
+						a(href='/keystone/signin', style='margin-right: 10px').btn.btn-lg.btn-primary Sign in
+						span.hidden-xs to Admin Panel
+			.col-xs-6
+				.row
+					.col-xs-4.pull-right
+						img(src="/images/lego.png", alt='Lego Construction Man from Lego Movie', data-toggle='tooltip', data-placement='top', title='SITE UNDER CONSTRUCTION. Check back soon for new features!').lego
