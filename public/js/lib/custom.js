@@ -162,15 +162,15 @@ $(".wow").each(function() {
 new WOW().init();
 
 // E-mail submittal to Formspree
-$(document).ready(function() {
-
-  $( "#form" ).submit(function( event ) {
-    $.ajax({
-      url: "//formspree.io/jmatthews@thegreatacademy.org",
-      method: "POST",
-      data: $(this).serialize(),
-      dataType: 'json',
-    });
-  });
-
-});
+// $(document).ready(function() {
+//
+//   $( "#form" ).submit(function( event ) {
+//     $.ajax({
+//       url: "//formspree.io/jmatthews@thegreatacademy.org",
+//       method: "POST",
+//       data: $(this).serialize(),
+//       dataType: 'json',
+//     });
+//   });
+//
+// });
