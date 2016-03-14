@@ -152,9 +152,7 @@ $(document).ready(function() {
 //     }, { offset: 'bottom-in-view' });
 // });
 
-/**
- * Wow plugin bottom offset calculation
- */
+// Wow Plugins
 
 $(".wow").each(function() {
     var wowHeight = $(this).height();
