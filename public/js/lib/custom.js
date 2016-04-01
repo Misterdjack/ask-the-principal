@@ -76,6 +76,10 @@ $(document).ready(function() {
   $('.carousel-control.right').click(function() {
     $('#myCarousel').carousel('next');
   });
+
+  $('#jmbutton').click(function () {
+    $('#jmbio').collapse('toggle');
+  })
 });
 
 /**

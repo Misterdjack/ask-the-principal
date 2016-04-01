@@ -42,9 +42,9 @@ body {
     margin: 0 auto;
 }
 
-// owl-wrapper
-.owl-wrapper {
-	width: 100%;
+// Font-Awesome overides
+.fa {
+	font-size: 30px;
 }
 
 //Index Styles
@@ -444,7 +444,7 @@ body {
  * Team
  */
 .team__item {
-  margin-bottom: 40px;
+	padding: 30px;
 }
 .team-item__img {
   margin-bottom: 20px;
@@ -466,14 +466,13 @@ body {
 }
 .team-item-contact__link {
   display: block;
-  float: left;
-  width: 50%;
+  float: right;
+  width: 100%;
   margin-top: 4.6px;
   margin-bottom: 4.6px;
-  border-radius: 3px 0 0 3px;
+  border-radius: 3px;
   text-align: center;
   line-height: 36.8px;
-  background-color: #eee;
   color: #565656;
   text-decoration: none;
   -webkit-transition: all 0.15s;
@@ -482,7 +481,7 @@ body {
 }
 .team-item-contact__link:hover,
 .team-item-contact__link:focus {
-  background: #55acee;
+  background: #d9534f;
   color: white;
 }
 .team-item-contact__link_facebook {
@@ -501,6 +500,11 @@ body {
   color: #9a9a9a;
 }
 
+@media (max-width: 555px) {
+	.team__item {
+	padding: 0px;
+	}
+}
 // Footer
 #footer {
 	// position: absolute;
@@ -524,6 +528,7 @@ footer a {
 }
 .footer-social__link {
   display: inline-block;
+	margin: 7px;
   width: 30px;
   height: 30px;
   border-radius: 3px;
