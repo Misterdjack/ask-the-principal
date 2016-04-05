@@ -77,9 +77,25 @@ $(document).ready(function() {
     $('#myCarousel').carousel('next');
   });
 
+  // About Us Show full Bio
   $('#jmbutton').click(function () {
     $('#jmbio').collapse('toggle');
-  })
+  });
+  $('#kmbutton').click(function () {
+    $('#kmbio').collapse('toggle');
+  });
+  $('#dpbutton').click(function () {
+    $('#dpbio').collapse('toggle');
+  });
+  $('#dgbutton').click(function () {
+    $('#dgbio').collapse('toggle');
+  });
+
+  // Hide full Bio details
+  $('body').click(function() {
+    $('.collapse').collapse('hide');
+  });
+
 });
 
 /**
