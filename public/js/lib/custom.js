@@ -186,7 +186,7 @@ $(document).ready(function() {
 
   $( "#form" ).submit(function( event ) {
     $.ajax({
-      url: "//formspree.io/darrenjack79@yahoo.com",
+      url: "//formspree.io/jmatthews@thegreatacademy.org",
       method: "POST",
       data: $(this).serialize(),
       dataType: 'json',
