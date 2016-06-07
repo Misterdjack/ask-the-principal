@@ -38,6 +38,15 @@ html(lang="en")
 			script(src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js")
 			script(src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js")
 		//-[endif]
+		
+		//- Google-analytics
+		script.
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-76687801-4', 'auto');
+			ga('send', 'pageview');
 
 		//- Include template-specific stylesheets by extending the css block
 		block css
@@ -136,7 +145,7 @@ html(lang="en")
 							a(href="http://thegreatacademy.org/foundation/" target="_blank") 
 								img(src="../images/tga_logo_footer.png", alt="The Great Academy Seal").center-block.img-responsive
 						.col-xs-4.col-middle
-							.footer__social Connect with us:  
+							.footer__social Connect with us:	
 								br
 								a.footer-social__link.footer-social__link_twitter(href='https://twitter.com/TheGREATAcademy' target="_blank")
 									i.fa.fa-twitter
